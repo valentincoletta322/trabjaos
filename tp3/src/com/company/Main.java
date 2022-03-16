@@ -13,7 +13,7 @@ public class Main {
 
         int importeAPagar = 0;
 
-        while (finalizarApp == true){
+        while (finalizarApp == false){
             System.out.println("Ingrese 1 para añadir un producto");
             System.out.println("Ingrese 2 para ver el importe");
             System.out.println("Ingrese 3 para finalizar un producto");
