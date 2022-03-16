@@ -17,15 +17,19 @@ public class Main {
             System.out.println("Ingrese 1 para añadir un producto");
             System.out.println("Ingrese 2 para ver el importe");
             System.out.println("Ingrese 3 para finalizar un producto");
-            int opcionDeMenu = 0;
+            Scanner ingreso0 = new Scanner(System.in);
+            int opcionDeMenu = ingreso0.nextInt();
+
             switch (opcionDeMenu){
 
                 case 1:
                     Producto nuevoProducto = new Producto();
-                    System.out.println("Ingrese el nombre del Producto");
+                    System.out.println("Ingrese el nombre del producto");
 
                     Scanner ingreso1 = new Scanner(System.in);
                     String nombreProductoNuevo = ingreso1.nextLine();
+
+                    System.out.println("Ingrese el precio del producto");
 
                     Scanner ingreso2 = new Scanner(System.in);
                     float precioProductoNuevo = ingreso2.nextFloat();
@@ -55,7 +59,7 @@ public class Main {
 
             }
 
-            System.out.println(importeAPagar);
+
 
         }
 
@@ -67,42 +71,3 @@ public class Main {
 
 
 }
-
-/*
-import java.util.ArrayList;
-
-public class Main {
-
-	public static void main(String[] args) {
-
-		variables primitivas
-int a = 1;
-    float c = 1.54f;
-
-    Clases envolventes
-    Integer b = 1;
-    Float d = 1.54f;
-
-
-    ArrayList
-
-    ArrayList<Integer> nums = new ArrayList<>();
-		nums.add(1);
-                nums.add(5);
-
-                int a = nums.get(0);
-                nums.remove(0);
-
-                ArrayList<Persona> personas = new ArrayList<>();
-
-        Persona p1 = new Persona();
-
-        ArrayList<ArrayList<Integer>> matriz = new ArrayList<>();
-
-
-         documentación:
-         https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html
-
-
-        }
-        } */
