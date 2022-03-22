@@ -18,11 +18,27 @@ public class Persona {
         else return false;
     }
 
-  /*  public static void main(String[] args){
-        Persona unaPersona = new Persona("Juan");
-        Persona otraPersona = new Persona("Juan");
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
 
-        System.out.println("Son la misma: " +unaPersona.sonIguales(otraPersona));
-    }*/
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
 
+    public void setDni(int dni) {
+        this.dni = dni;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public int getDni() {
+        return dni;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
 }
