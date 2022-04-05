@@ -16,7 +16,6 @@
     text-decoration: none;
     text-transform: capitalize;
     transition: .2s linear;
-    background-color: var(--black);
 }
 
 html{
@@ -151,13 +150,14 @@ section{
 }
 
 .about{
-    background-color: #070918;
+    background-color: #ffffff;
+    padding-top: 200px;
 }
 
 .about .row{
     display: flex;
     align-items: center;
-    background:var(--nasheColor);
+    background:white;
     flex-wrap: wrap;
     border-radius: 30px;
     border:var(--border);
