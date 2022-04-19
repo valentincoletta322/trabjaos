@@ -104,7 +104,7 @@ section{
 
 .header .mainText a:hover{
     color:var(--main-color);
-    text-shadow: 0.5rem 0.5rem 0.5rem var(--main-color);
+    border-bottom: .1rem solid var(--main-color);
     padding-bottom: .5rem;
 }
 
@@ -123,19 +123,25 @@ section{
 }
 
 #taller {
-    background-color: #757575;
+    color: rgb(255, 255, 255);
+    background-color: #000e03;
 
 }
 
 #bases{
-    background-color: #bdbdbd;
+    background-color: #001b08;
+    color: rgb(255, 255, 255);
+    
 }
 
 #prog {
     padding-top: 65px;
-    background-color: #cdcdcd;
+    background-color: #00230b;
+    color: rgb(255, 255, 255);
 
 }
 
-
+.heading {
+    color: rgb(255, 255, 255);
+}
 
