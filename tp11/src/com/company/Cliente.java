@@ -52,8 +52,13 @@ public class Cliente {
     public void añadirLibrosComprados(Libro unLibro) {
         this.arrayLibrosComprados.add(unLibro);
     }
-    public void librosComprados(SistemaLibreria sistema){
-        HashMap<Cliente, Float> compras = sistema.getCompras();
-        System.out.println(compras.get(1)+" "+this.unidadesPorLibro);
+    public void librosComprados(){
+        int precioTotal = 0;
+        for (Libro unLibro : unidadesPorLibro.keySet()) {
+                precioTotal += unLibro.getPrecio()*unidadesPorLibro.get(unLibro);
+                System.out.println(unLibro.getNombre()+" "+unidadesPorLibro.get(unLibro);
+        
+        }
+        System.out.println("Precio total: "+precioTotal);
     }
 }
