@@ -13,12 +13,17 @@ public class Alumno extends Persona {
         notasPorMateria.put(unaMateria, notas);
     }
 
+    public boolean esMayor(Float nota1, Float nota2){
+        if (nota1 > nota2) return false;
+        return true;
+    }
+
     public void menorNota(){
 
         float notaMenor = 11;
         for (String key : notasPorMateria.keySet()) {
             for(int i = 0; i<notasPorMateria.get(key).size(); i++) {
-                if (notaMenor > notasPorMateria.get(key).get(i)) {
+                if (!esMayor(notaMenor,notasPorMateria.get(key).get(i))) {
                     notaMenor = notasPorMateria.get(key).get(i);
                 }
             }
@@ -31,7 +36,7 @@ public class Alumno extends Persona {
         float notaMayor = 0;
         for (String key : notasPorMateria.keySet()) {
             for(int i = 0; i<notasPorMateria.get(key).size(); i++) {
-                if (notaMayor < notasPorMateria.get(key).get(i)) {
+                if (esMayor(notaMayor, notasPorMateria.get(key).get(i))) {
                     notaMayor = notasPorMateria.get(key).get(i);
                 }
             }
@@ -63,4 +68,5 @@ public class Alumno extends Persona {
 
 
 }
+
 
