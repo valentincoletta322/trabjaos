@@ -11,14 +11,6 @@ public class Alumno extends Persona {
         ArrayList<Float> notas = notasPorMateria.get(unaMateria);
         notas.add(unaNota);
         notasPorMateria.put(unaMateria, notas);
-
-        /*
-
-        for(String key : notasPorMateria.keyset()){
-
-        }
-
-         */
     }
 
     public void menorNota(){
