@@ -1,9 +1,10 @@
 package com.company;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class TarjetaEquis {
-    private int saldo;
+    private float saldo;
     private int saldoNegativoMaximo;
     private int numeronId;
     private ArrayList<Viaje> viajes;
@@ -15,18 +16,18 @@ public class TarjetaEquis {
         this.viajes = new ArrayList<>();
     }
 
-    public TarjetaEquis(int saldo, int saldoNegativoMaximo, int numeronId, ArrayList<Viaje> viajes) {
+    public TarjetaEquis(float saldo, int saldoNegativoMaximo, int numeronId, ArrayList<Viaje> viajes) {
         this.saldo = saldo;
         this.saldoNegativoMaximo = saldoNegativoMaximo;
         this.numeronId = numeronId;
         this.viajes = new ArrayList<>();
     }
 
-    public int getSaldo() {
+    public float getSaldo() {
         return saldo;
     }
 
-    public void setSaldo(int saldo) {
+    public void setSaldo(float saldo) {
         this.saldo = saldo;
     }
 
@@ -45,13 +46,18 @@ public class TarjetaEquis {
     public void setNumeronId(int numeronId) {
         this.numeronId = numeronId;
     }
-    public void cargarSube(float monto){
-
+    public void cargarSaldo(float monto){
+        this.saldo += monto;
     }
-    public void realizarViaje(Viaje viaje){
-
+    public boolean realizarViaje(Viaje viaje){
+        if(this.saldo-viaje.getPrecio() < this.saldoNegativoMaximo) return false;
+        else {
+            this.saldo-=viaje.getPrecio();
+            return true;
+        }
     }
     public void ultimoMontoAbonado(){
+        this.viajes.get(this.viajes.size()-1).getPrecio();
 
     }
 
