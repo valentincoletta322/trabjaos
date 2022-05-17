@@ -56,8 +56,8 @@ public class TarjetaEquis {
             return true;
         }
     }
-    public void ultimoMontoAbonado(){
-        this.viajes.get(this.viajes.size()-1).getPrecio();
+    public float ultimoMontoAbonado(){
+      return this.viajes.get(this.viajes.size()-1).getPrecio();
 
     }
 

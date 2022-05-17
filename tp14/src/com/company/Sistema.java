@@ -56,10 +56,17 @@ public class Sistema {
 
     }
 
-   /* public HashMap<Pasajero, Float> pasajeroConUltimoMontoAbonado(){
-        HashMap<Pasajero,Float>
+   public HashMap<Integer, Float> pasajeroConUltimoMontoAbonado(){
+        HashMap<Integer,Float> pasajerosConMonto = new HashMap<>();
 
-        return
-   * } */
+        for (Pasajero unPasajero : this.historialDePasajeros){
+            TarjetaEquis tarjeta = unPasajero.getTarjeta();
+            int id = tarjeta.getNumeronId();
+            float ultimoAbonado = tarjeta.ultimoMontoAbonado();
+            pasajerosConMonto.put(id, ultimoAbonado);
+        }
+
+        return pasajerosConMonto;
+   }
 
 }
