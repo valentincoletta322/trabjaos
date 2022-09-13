@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "312780961321",
+    "firebase_url": "https://chat-chibolo-default-rtdb.firebaseio.com",
+    "project_id": "chat-chibolo",
+    "storage_bucket": "chat-chibolo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:312780961321:android:76e586ff66c7af448d4e38",
+        "android_client_info": {
+          "package_name": "com.example.chatllemi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "312780961321-qe5jtlrgu4jtf783fkf6epskobns0gi4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.chatllemi",
+            "certificate_hash": "82666b5d43d1e7a8e52eab498d6fb82f20608c09"
+          }
+        },
+        {
+          "client_id": "312780961321-ad9h3soreo66dlt5hkpb8bf849kjt6rc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUoQSy6wuBHIeDvjJMRSq-DSkIxAjKJys"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "312780961321-ad9h3soreo66dlt5hkpb8bf849kjt6rc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
