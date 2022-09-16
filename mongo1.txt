@@ -44,6 +44,12 @@ db.hotel.deleteMany({$or:[{Promotions:{$exists:false}},{Promotions:{$eq:[]}}]})
 
 
 db.hotel.find({Name:"Hotel Transilvania"},{$max:{"Discounts.discount":50}})
-db.hotel.updateMany({Name:"Hotel 1"},{$unset:{"UsefulNumbers.phone":""}})
+db.hotel.updateMany({Name:"Hotel 1"},{$unset:{"UsefulNumbers.phone"}})
+db.hotel.updateMany({"Discount.type":"Jubilado"},{$inc:{discount: +2}})
+db.hotel.updateMany({"Discount.type":"Jubilado"},{$mul:{discount:2}})
+db.hotel.find({Name:"Hotel Transilvania"},{$min:{"Discounts.discount":20}})
+db.hotel.updateMany({}, { $rename: { "Name": "Nombre Hotel" }})
+
+
 
 mongoexport --collection=<coll> <options> <connection-string>
