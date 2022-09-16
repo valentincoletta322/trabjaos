@@ -24,9 +24,9 @@ db.hotel.find({},
 {Name:1,Discount:1,Comodities:1}).sort
 ({"Discounts.discount":-1}).limit(1)
 
-db.collection.updateMany({"Discounts.discount":{$gte: 25}},{Name:"Hotel Skaarl"})
+db.collection.updateMany({"Discounts.discount":{$gte: 25}},{$set:{Name:"Hotel Skaarl"}})
 db.collection.find({"Discounts.discount":{$in: [ 5, 15 ]}},{Name:1})
-db.collection.find({"Discounts.discount":{$nin: [ 10, 25 ]}},{Name:"Hotel Skaarl"})
+db.collection.find({"Discounts.discount":{$nin: [ 10, 25 ]}},{Name:1})
 db.hotel.find({Promotions:{$exists:true, $ne:[]}},{Name:1, Information:{Address:1}, Information:{Phone:1}})
 
 db.hotel.find({$not{Name:"Hotel Transilvania"}},{Name:1})
