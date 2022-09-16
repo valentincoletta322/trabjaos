@@ -50,6 +50,8 @@ db.hotel.updateMany({"Discount.type":"Jubilado"},{$mul:{discount:2}})
 db.hotel.find({Name:"Hotel Transilvania"},{$min:{"Discounts.discount":20}})
 db.hotel.updateMany({}, { $rename: { "Name": "Nombre Hotel" }})
 
-
+db.hotel.updateMany( {}, { $pop: { Promotions: 1}})
+db.hotel.updateMany( {}, { $pull: {"Discount.type":"Jubilado"} } )
+db.students.updateMany({ },{ $push: { Promotions: "Promo 3" } })
 
 mongoexport --collection=<coll> <options> <connection-string>
